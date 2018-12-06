@@ -34,11 +34,13 @@
                 position: relative;
             }
 
+            /*
             .top-right {
                 position: absolute;
                 right: 10px;
                 top: 18px;
             }
+            */
 
             .content {
                 text-align: center;
@@ -51,11 +53,21 @@
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
+                font-size: 20px;
+                font-weight: 800;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                display: block;
+                text-align: center;
+            }
+
+            .links{
+                display: inline-block;
+                border-style: solid;
+                border-width: 2px;
+                border-radius: 10px;
+                padding: 10px;
             }
 
             .m-b-md {
@@ -70,15 +82,18 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Login</a><br>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Register</a><br>
                         @endif
+                        <a href="{{ url('/') }}">Without registration</a>
+
                     @endauth
                 </div>
             @endif
 
+            <!--
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
@@ -93,6 +108,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
+            -->
         </div>
     </body>
 </html>

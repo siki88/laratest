@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb7c8be93ee90bd9407101d081549030",
+    "content-hash": "9cc5f336023847344a5f87f4a807595d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -812,6 +812,57 @@
                 "storage"
             ],
             "time": "2018-11-23T23:41:29+00:00"
+        },
+        {
+            "name": "lloricode/laravel-html-table",
+            "version": "v1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lloricode/laravel-html-table.git",
+                "reference": "693edda0eb9a9f41786d440a6ea61c476ac1d2ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lloricode/laravel-html-table/zipball/693edda0eb9a9f41786d440a6ea61c476ac1d2ad",
+                "reference": "693edda0eb9a9f41786d440a6ea61c476ac1d2ad",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.12",
+                "orchestra/testbench": "~3.3.0|~3.4.2|^3.5.0",
+                "phpunit/phpunit": "^5.7|6.2|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lloricode\\LaravelHtmlTable\\Providers\\LaravelHtmlTableProvider"
+                    ],
+                    "aliases": {
+                        "Table": "Lloricode\\LaravelHtmlTable\\Facades\\LaravelHtmlTableFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lloricode\\LaravelHtmlTable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lloric Mayuga Garcia",
+                    "email": "lloricode@gmail.com"
+                }
+            ],
+            "description": "Html table generator for laravel",
+            "time": "2018-09-23T06:59:13+00:00"
         },
         {
             "name": "monolog/monolog",

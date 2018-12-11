@@ -25,8 +25,6 @@
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a><br>
                         @endif
-                        <a href="{{ url('/without') }}">Without registration</a>
-
                     @endauth
                 </div>
             @endif

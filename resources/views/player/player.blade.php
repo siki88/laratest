@@ -16,27 +16,15 @@
             </div>
             <div id="plwrap">
                 <ul id="plList">
-                    <li>
-                        <div class="plItem">
-                            <div class="plNum">1.</div>
-                            <div class="plTitle">Joe L.'s Studio -- All This Is</div>
-                            <div class="plLength">2:46</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="plItem">
-                            <div class="plNum">2.</div>
-                            <div class="plTitle">Broadwing Studio -- The Forsaken</div>
-                            <div class="plLength">8:32</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="plItem">
-                            <div class="plNum">3.</div>
-                            <div class="plTitle">Broadwing Studio -- All The Kings Men</div>
-                            <div class="plLength">5:05</div>
-                        </div>
-                    </li>
+                    @foreach(\App\Http\Controllers\PlayerController::getPlayListPlayer() as $playlist)
+                        <li>
+                            <div class="plItem">
+                                <div class="plNum">{{$playlist->id}}.</div>
+                                <div class="plTitle">{{$playlist->song}}</div>
+                                <div class="plLength">2:46</div>
+                            </div>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>

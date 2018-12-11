@@ -1,27 +1,19 @@
-<p class="pForTable">ALBUM</p>
-<table style="width:100%">
-    <tr>
-        <th>Name</th>
-        <th>Long</th>
-        <th>Size</th>
-        <th>Action</th>
-    </tr>
-    <tr class='clickable-row' data-href='url://' onclick="trclick()">
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
-        <td>open</td>
-    </tr>
-    <tr class='clickable-row' data-href='url://' onclick="trclick()">
-        <td>Eve</td>
-        <td>Jackson</td>
-        <td>50</td>
-        <td style="font-weight: bold;">close</td>
-    </tr>
-</table>
 
-<script>
-    function trclick(){
-        console.log('tr clicked')
-    };
-</script>
+<p class="pForTable">SONG</p>
+
+<?php
+$header = \App\Http\Controllers\PlayListController::getPlayList();
+?>
+
+        <!--
+        {!! Table::optionLinks('home','action','delete')
+                ->modelResult(function($query){
+                      return $query;
+                  })->generateModel($header,'App\Song',$header,0,['class'=>'table'])
+        !!}
+        -->
+
+        {!! Table::optionLinks('home', 'action', 'delete')
+                ->generateModel($header,'App\Song',$header,0,['class'=>'table'])
+        !!}
+

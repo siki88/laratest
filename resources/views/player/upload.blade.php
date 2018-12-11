@@ -2,20 +2,25 @@
 
     {!! Form::open(array('url' => 'home','method' => 'post','files' => true,'class' => 'formUpload')) !!}
 
-    <p>UPLOAD MP3 SECTION</p>
+    @include('partials.errorUpload');
 
     <div class="form-group">
-        {!! Form::label('Product mp3') !!}
-        {!! Form::file('image', null) !!}
+        {!! Form::label('Mp3') !!}
+        {!! Form::file('song', null) !!}
+    </div>
+
+    <div class="form-group">
+        {!! Form::label('Compress mp3?') !!}
+        {!! Form::checkbox('compress', null) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('Select album for save') !!}
-        {!! Form::select('size', array('L' => 'Large', 'S' => 'Small')) !!}
+        {!! Form::select('album', array('L' => 'Large', 'S' => 'Small')) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::submit('Save new singl!') !!}
+        {!! Form::button('Save new singl!',['type'=>'submit']) !!}
     </div>
     {!! Form::close() !!}
     </div>

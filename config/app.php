@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Lloricode\LaravelHtmlTable\Providers\LaravelHtmlTableProvider::class,
 
         /*
          * Package Service Providers...
@@ -226,6 +227,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Table'=>  Lloricode\LaravelHtmlTable\Facades\LaravelHtmlTableFacade::class,
 
     ],
 

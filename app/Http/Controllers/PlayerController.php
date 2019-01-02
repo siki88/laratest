@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Song;
 use Illuminate\Http\Request;
 
 class PlayerController extends Controller
@@ -38,11 +37,6 @@ class PlayerController extends Controller
         foreach (glob("audio/*.mp3") as $filename) {
             array_push($this->audios,$filename);
         }
-    }
-
-    public static function getPlayListPlayer(){
-        $songs = new Song();
-        return $songs->limit(3)->get();
     }
 
 }

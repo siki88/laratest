@@ -16,7 +16,7 @@
             </div>
             <div id="plwrap">
                 <ul id="plList">
-                    @foreach(\App\Http\Controllers\PlayerController::getPlayListPlayer() as $playlist)
+                    @foreach($playlistPlayer as $playlist)
                         <li>
                             <div class="plItem">
                                 <div class="plNum">{{$playlist->id}}.</div>

@@ -1,28 +1,32 @@
 <article>
 
-    {!! Form::open(array('url' => 'home','method' => 'post','files' => true,'class' => 'formUpload')) !!}
+    {{ Form::open(array('url' => 'home','method' => 'post','files' => true,'class' => 'formUpload')) }}
 
     @include('partials.errorUpload');
 
     <div class="form-group">
-        {!! Form::label('Mp3') !!}
-        {!! Form::file('song', null) !!}
+        {{ Form::label('Mp3') }}
+        {{ Form::file('song', null) }}
     </div>
 
     <div class="form-group">
-        {!! Form::label('Compress mp3?') !!}
-        {!! Form::checkbox('compress', null) !!}
+        {{ Form::label('Compress mp3?') }}
+        {{ Form::checkbox('compress','Ano') }}
+    </div>    <div class="form-group">
+        {{ Form::label('Convert to mp3?') }}
+        {{ Form::checkbox('convert','Ano') }}
     </div>
 
     <div class="form-group">
-        {!! Form::label('Select album for save') !!}
-        {!! Form::select('album', array('L' => 'Large', 'S' => 'Small')) !!}
+        {{ Form::label('Select album for save') }}
+        {{ Form::select('album', array('L' => 'Large', 'S' => 'Small')) }}
     </div>
 
     <div class="form-group">
-        {!! Form::button('Save new song!',['type'=>'submit']) !!}
+        {{ Form::hidden('long_song', null) }}
+        {{ Form::button('Save new song!',['type'=>'submit']) }}
     </div>
-    {!! Form::close() !!}
+    {{ Form::close() }}
     </div>
 
 </article>

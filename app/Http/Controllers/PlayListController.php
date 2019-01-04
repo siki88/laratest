@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Song;
+use DB;
 
 use Illuminate\Http\Request;
 
@@ -31,8 +33,7 @@ class PlayListController extends Controller
         $this->songs = $songs;
     }
 
-    public function deleteSong($id){
-        dd($id);
-    }
+
+
 
 }

@@ -56,80 +56,6 @@ html, body {
 
 
 
-
-
-
-
-
-/*
-CSS Document
-My style
-SIKI
-*/
-
-section{
-    width: 50%;
-    float: left;
-    height: 650px;
-    box-shadow: 0px 0px 3px 0px  rgba(0,0,0,0.2);
-}
-
-table{
-    padding-left: 20px;
-}
-
-table tr {
-    box-shadow: 0px 0px 3px 0px  rgba(0,0,0,0.2);
-}
-
-table tr th {
-    padding-left: 20px;
-}
-
-
-table tr td {
-    padding-left: 20px;
-}
-
-article{
-    height: 50%;
-}
-
-footer{
-    position: relative;
-    clear:both;
-    height: 50px;
-}
-
-.formUpload{
-    box-shadow: 0px -2px 1px 0px  rgba(0,0,0,0.2);
-    text-align: center;
-}
-
-.formUpload p{
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.clickable-row:hover{
-    background-color:#A9A9A9;
-}
-
-.pForTable{
-    text-align: center;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
-
-
-
-
-
-
 /*
 Skeleton v1.2
 Copyright: Dave Gamache
@@ -299,6 +225,74 @@ html[data-useragent*="rv:11.0"] .plSel:hover { background-color:#A9A9A9!importan
 @media only screen and (max-width: 959px) and (min-width: 768px) and (-webkit-min-device-pixel-ratio:0), only screen and (max-width: 767px) and (min-width: 480px) and (-webkit-min-device-pixel-ratio:0), only screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio:0) {
     audio { width: 100%; }
 }
+
+
+
+
+
+/*
+CSS Document
+My style
+SIKI
+*/
+
+section{
+    width: 50%;
+    float: left;
+    height: 1000px;
+    box-shadow: 0px 0px 3px 0px  rgba(0,0,0,0.2);
+}
+
+table{
+    padding-left: 20px;
+}
+
+table tr {
+    box-shadow: 0px 0px 3px 0px  rgba(0,0,0,0.2);
+}
+
+table tr th {
+    padding-left: 20px;
+}
+
+
+table tr td {
+    padding-left: 20px;
+}
+
+article{
+    height: 50%;
+}
+
+footer{
+    position: relative;
+    clear:both;
+    height: 50px;
+}
+
+.formUpload{
+    box-shadow: 0px -2px 1px 0px  rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.formUpload p{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.clickable-row:hover{
+    background-color:#A9A9A9;
+}
+
+.pForTable{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
 
 
 

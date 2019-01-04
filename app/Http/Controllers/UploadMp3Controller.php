@@ -40,17 +40,26 @@ class UploadMp3Controller extends Controller{
     //VALIDATION FORM
     private function controll($request){
 
+        echo('<pre>');
+        var_dump($request->all());
+        echo('<pre>');
+        die();
+
         // SEND TO VALIDATION
         $validator = Validator::make($request->all(), [
            // 'album'=> 'required', //exists:album',
            // 'file' => 'required|mimes:audio/mp3|max:10240'
         ]);
 
+
+
         if ($validator->fails()){
             return back()
                 ->withErrors($validator)
                 ->withInput();
         }
+
+
 
         //SEND TO MODEL
         DB::table('songs')

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Song;
 use Illuminate\Http\Request;
 
 class PlayerController extends Controller
@@ -38,5 +39,8 @@ class PlayerController extends Controller
             array_push($this->audios,$filename);
         }
     }
+
+
+
 
 }

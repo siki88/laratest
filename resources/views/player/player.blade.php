@@ -16,7 +16,7 @@
             </div>
             <div id="plwrap">
                 <ul id="plList">
-                    @foreach($playlistPlayer as $playlist)
+                    @foreach($playerList as $playlist)
                         <li>
                             <div class="plItem">
                                 <div class="plNum">{{$playlist->id}}.</div>
@@ -30,3 +30,13 @@
         </div>
 
 </article>
+
+
+<!--
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+
+
+-->

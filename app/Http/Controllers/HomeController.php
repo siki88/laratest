@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Song;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Parent_;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $songs = new Song();
+
+        $playerList = $songs->get();
+        $playerList = (array_keys($playerList->first()->toArray()));
+
+        return view('home')
+            ->withPlayerList($songs->limit(3)->get())
+            ->withPlayList($playerList)
+            ->withTest('test');
     }
 }

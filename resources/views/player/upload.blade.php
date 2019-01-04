@@ -20,7 +20,7 @@
     </div>
 
     <div class="form-group">
-        {!! Form::button('Save new singl!',['type'=>'submit']) !!}
+        {!! Form::button('Save new song!',['type'=>'submit']) !!}
     </div>
     {!! Form::close() !!}
     </div>

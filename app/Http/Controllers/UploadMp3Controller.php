@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use DB;
+use wapmorgan\Mp3Info\Mp3Info;
 
 class UploadMp3Controller extends Controller{
 
@@ -34,28 +35,19 @@ class UploadMp3Controller extends Controller{
 
 
     public function index( Request $request){
-      //  $request .= $request->long_song('55');
         return $this->controll($request);
     }
 
     //VALIDATION FORM
     private function controll($request){
 
-      // $request->all() .= $this->checkboxHelper($request->all(),'compress');
-
-
-        echo('<pre>');
-        var_dump($request->all());
-        //var_dump($request->checkbox() ? 1 : 0);
-        //var_dump();
-        echo('<pre>');
-       // die();
-
         // SEND TO VALIDATION
         $validator = Validator::make($request->all(), [
            // 'album'=> 'required', //exists:album',
            // 'file' => 'required|mimes:audio/mp3|max:10240'
         ]);
+
+       // $validator->setAttributeNames(array('long_song'=>'test'));
 
 
 
@@ -65,8 +57,25 @@ class UploadMp3Controller extends Controller{
                 ->withInput();
         }
 
+      //  $audio = new Mp3Info($request->file('song'),true);
+
+      //  $request->setAttribute('long_song') = "55:55";
+/*
+        echo('<pre>');
+       // var_dump($request->file('song')->getSize());
+        var_dump(get_class_methods($request));
+
+     //   var_dump($request->long_song());
+          var_dump($request->all());
+        echo('</pre>');
+        die();
+*/
 
 
+        $request->merge([
+                'size_song' => $request->file('song')->getSize(),
+                'long_song' => '55:55te'
+                        ]);
 
 
         //SEND TO MODEL
@@ -77,16 +86,5 @@ class UploadMp3Controller extends Controller{
             ->with('message','UPLOAD COMPLETE');
     }
 
-    //This function is used to insert missing index key when checkboxes are used
-    /*
-    private function checkboxHelper($request_array, $key){
-        if(!array_key_exists($key,$request_array)){
-            $request_array[$key]='Ano';
-        }else{
-            $request_array[$key]='Ne';
-        }
-        return $request_array;
-    }
-    */
 
 }

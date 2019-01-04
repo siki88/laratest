@@ -6,7 +6,7 @@
 
     <div class="form-group">
         {{ Form::label('Mp3') }}
-        {{ Form::file('song', null) }}
+        {{ Form::file('song', array('type' => 'file','accept' => '.mp3' )) }}
     </div>
 
     <div class="form-group">
@@ -14,16 +14,15 @@
         {{ Form::checkbox('compress','Ano') }}
     </div>    <div class="form-group">
         {{ Form::label('Convert to mp3?') }}
-        {{ Form::checkbox('convert','Ano') }}
+        {{ Form::checkbox('convert','Wav to MP3') }}
     </div>
 
     <div class="form-group">
         {{ Form::label('Select album for save') }}
-        {{ Form::select('album', array('L' => 'Large', 'S' => 'Small')) }}
+        {{ Form::select('album', array('L' => 'Large', 'S' => 'Small', 'Other' => 'Other')) }}
     </div>
 
     <div class="form-group">
-        {{ Form::hidden('long_song', null) }}
         {{ Form::button('Save new song!',['type'=>'submit']) }}
     </div>
     {{ Form::close() }}

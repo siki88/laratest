@@ -15,7 +15,7 @@ class PlayListController extends Controller
      * PlayListController constructor.
      * @param array $songs
      */
-    public function __construct(array $songs){
+    public function __construct(array $songs = null){
         $this->songs = $songs;
     }
 
@@ -31,6 +31,13 @@ class PlayListController extends Controller
      */
     public function setSongs(array $songs): void{
         $this->songs = $songs;
+    }
+
+    public function deleteSong($id){
+        echo('<pre>');
+        var_dump($id);
+        echo('</pre>');
+        die();
     }
 
 

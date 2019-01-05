@@ -6,7 +6,7 @@
 
     <div class="form-group">
         {{ Form::label('Mp3') }}
-        {{ Form::file('song', array('type' => 'file','accept' => '.mp3' )) }}
+        {{ Form::file('song', array('type' => 'file','accept' => 'audio/*,.mp3,.wav' , 'max' => '8191' )) }}
     </div>
 
     <div class="form-group">

@@ -15,16 +15,16 @@
                 </div>
             </div>
             <div id="plwrap">
-                <ul id="plList">
+                <ul id="plList"> @if(!empty($playerList))
                     @foreach($playerList as $playlist)
                         <li>
                             <div class="plItem">
-                                <div class="plNum">{{$playlist->id}}.</div>
-                                <div class="plTitle">{{$playlist->song}}</div>
+                              <!--  <div class="plNum">{{$playlist->id}}.</div> -->
+                                <div class="plTitle">{{$playlist->name}}</div>
                                 <div class="plLength">2:46</div>
                             </div>
                         </li>
-                    @endforeach
+                    @endforeach @endif
                 </ul>
             </div>
         </div>

@@ -7,11 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Song extends Model{
 
-    private $songs;
+    protected $hidden = ['id','song','users_id'];
+
+  //  private $songs;
 
     public function someFunction()
     {
-        dd($this->table());
+     //   dd($this->table());
     }
 
     public function __construct(){
@@ -22,7 +24,7 @@ class Song extends Model{
 
    public function getPlayListPlayer(){
 
-        return $this->songs->limit(3)->get();
+    //    return $this->songs->limit(3)->get();
 
       // $songs = new Song();
       // return $songs->limit(3)->get();

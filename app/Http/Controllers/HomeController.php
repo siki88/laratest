@@ -32,8 +32,6 @@ class HomeController extends Controller
 
         $audios = new PlayerController();
 
-
-
         if($songs->get()->isEmpty()){
             return view('home')
                 ->withPlayList([])
@@ -46,8 +44,6 @@ class HomeController extends Controller
                 ->withPlayList(array_keys($songs->first()->toArray()))
                 ->withSongModel('App\Song');
         }
-
-
 
     }
 }

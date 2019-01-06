@@ -1,5 +1,4 @@
 <article>
-
         <div class="twelve columns offset-by-two add-bottom">
             <div id="nowPlay">
                 <span class="left" id="npAction">Paused...</span>
@@ -7,7 +6,9 @@
             </div>
             <div id="audiowrap">
                 <div id="audio0">
-                    <audio preload id="audio1" controls="controls">{!! $player !!}Your browser does not support HTML5 Audio!</audio>
+                    <audio preload id="audio1" controls="controls">
+                        {!! $player !!}
+                    </audio>
                 </div>
                 <div id="tracks">
                     <a id="btnPrev">&laquo;</a>
@@ -15,9 +16,9 @@
                 </div>
             </div>
             <div id="plwrap">
-                <ul id="plList"> {!! $playerList !!}
+                <ul id="plList">
+                    {!! $playerList !!}
                 </ul>
             </div>
-        </div><script  src="js/indexPlayer.js"></script>
-
+        </div>
 </article>

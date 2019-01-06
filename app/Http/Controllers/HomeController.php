@@ -6,6 +6,7 @@ use App\Song;
 use Auth;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Types\Parent_;
+use App\Http\Controllers\PlayerController;
 
 class HomeController extends Controller
 {
@@ -29,11 +30,9 @@ class HomeController extends Controller
         $songs = new Song();
         $songs = $songs->where('users_id', Auth::user()->id);
 
-        //   dd($songs->where('users_id', Auth::user()->id)->get());
+        $audios = new PlayerController();
 
-    //  dd(array_keys($songs->first()->toArray());
 
-     // dd($songs->where('users_id', 1)->get());
 
         if($songs->get()->isEmpty()){
             return view('home')
@@ -41,7 +40,9 @@ class HomeController extends Controller
                 ->withSongModel($songs->get()->isEmpty());
         }else{
             return view('home')
-                ->withPlayerList($songs->limit(3)->get())
+             //   ->withPlayerList($songs->limit(8)->get())
+                ->withPlayer($audios->audioSource())
+                ->withPlayerList($audios->playList())
                 ->withPlayList(array_keys($songs->first()->toArray()))
                 ->withSongModel('App\Song');
         }

@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Lloricode\LaravelHtmlTable\Providers\LaravelHtmlTableProvider::class,
+        Pbmedia\LaravelFFMpeg\FFMpegServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -228,6 +229,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Table'=>  Lloricode\LaravelHtmlTable\Facades\LaravelHtmlTableFacade::class,
+        'FFMpeg' => Pbmedia\LaravelFFMpeg\FFMpegFacade::class,
 
     ],
 

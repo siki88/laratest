@@ -6,7 +6,7 @@
 
     <div class="form-group">
         {{ Form::label('Mp3') }}
-        {{ Form::file('song', array('type' => 'file','accept' => 'audio/*,.mp3,.wav' , 'max' => '8191' )) }}
+        {{ Form::file('song', array('type' => 'file','accept' => 'audio/*,.mp3,.wav' , 'max' => '8191' , 'class' => 'fileInput' )) }}
     </div>
 
     <div class="form-group">
@@ -14,7 +14,7 @@
         {{ Form::checkbox('compress','Ano') }}
     </div>    <div class="form-group">
         {{ Form::label('Convert to mp3?') }}
-        {{ Form::checkbox('convert','Wav to MP3') }}
+        {{ Form::checkbox('format',true) }}
     </div>
 
     <div class="form-group">

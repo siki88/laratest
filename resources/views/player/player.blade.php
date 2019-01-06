@@ -7,7 +7,7 @@
             </div>
             <div id="audiowrap">
                 <div id="audio0">
-                    <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+                    <audio preload id="audio1" controls="controls">{!! $player !!}Your browser does not support HTML5 Audio!</audio>
                 </div>
                 <div id="tracks">
                     <a id="btnPrev">&laquo;</a>
@@ -15,18 +15,9 @@
                 </div>
             </div>
             <div id="plwrap">
-                <ul id="plList"> @if(!empty($playerList))
-                    @foreach($playerList as $playlist)
-                        <li>
-                            <div class="plItem">
-                              <!--  <div class="plNum">{{$playlist->id}}.</div> -->
-                                <div class="plTitle">{{$playlist->name}}</div>
-                                <div class="plLength">2:46</div>
-                            </div>
-                        </li>
-                    @endforeach @endif
+                <ul id="plList"> {!! $playerList !!}
                 </ul>
             </div>
-        </div>
+        </div><script  src="js/indexPlayer.js"></script>
 
 </article>

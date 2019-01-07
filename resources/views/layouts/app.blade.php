@@ -11,7 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/index.js') }}" defer></script>
+<!--    <script src="{{ asset('js/index.js') }}" defer></script> -->
     <script src="{{ asset('js/indexPlayer.js') }}" defer></script>
 
     <!-- Fonts -->

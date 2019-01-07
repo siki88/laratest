@@ -21,6 +21,8 @@ Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('home/{id}', 'PlayListController@deleteSong');
-Route::get('home{?id}', 'PlayListController@deleteSong');
 Route::post('home', 'UploadMp3Controller@index');
+
+
+Route::resource('post');
 

@@ -139,37 +139,7 @@ class UploadMp3Controller extends Controller{
         $filename = $music_file->getClientOriginalName();
 
         $location = public_path('mp3/');
-/*
-        echo('<pre>');
-        var_dump(get_class_methods($music_file));
-        echo('</pre>');
 
-        echo('<pre>');
-        var_dump($music_file->hashName());
-        var_dump($music_file->path());
-        var_dump($music_file->extension());
-        var_dump($music_file->clientExtension());
-        var_dump($music_file->getPathInfo());
-        var_dump($music_file->getFileInfo());
-        var_dump($music_file->getRealPath());
-        var_dump($music_file->getFileInfo());
-        var_dump($music_file->getLinkTarget());
-        var_dump($music_file->getPathname());
-        var_dump($music_file->getBasename());
-        var_dump($music_file->getExtension());
-        var_dump($music_file->getFilename());
-        var_dump($music_file->getPath());
-        var_dump($music_file->getMimeType());
-        echo('</pre>');
-
-        echo('<pre>');
-        var_dump($location);
-        var_dump($requestFormat);
-        var_dump(public_path('mp3/'));
-        echo('</pre>');
-
-        dd($filename);
-*/
         $music_file->move($location,$filename);
 
         //CONVERT TO MP3

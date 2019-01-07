@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Song extends Model{
 
-    protected $hidden = ['id','song','users_id'];
+    protected $hidden = ['song','users_id'];
 
   //  private $songs;
 

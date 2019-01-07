@@ -63,8 +63,8 @@ class PlayerController extends Controller
         foreach ($this->getAudios() as $key => $value){
           //  $key += 1;
           //  $myReturn .= '<li><div class="plItem"><div class="plTitle"></div>'.$value.'</div><div class="plLength">2:46</div></div></li>';
-          //  $myReturn .= '<div class="play-list-row" data-track-row="'.$key.'"><div class="small-toggle-btn"><i class="small-play-btn"><span class="screen-reader-text">"'.$value.'"</span></i></div><div class="track-number">"'.$key.'"</div><div class="track-title"><a class="playlist-track" href="#" data-play-track="'.$key.'">"'.$value.'"</a></div>';
-            $myReturn .= '<div class="play-list-row" data-track-row="'.$key.'"><div class="track-title"><a class="playlist-track" href="#" data-play-track="'.$key.'">"'.$value.'"</a></div>';
+            $myReturn .= '<div class="play-list-row" data-track-row="'.$key.'"><div class="small-toggle-btn"><i class="small-play-btn"><span class="screen-reader-text">"'.$value.'"</span></i></div><div class="track-number">"'.$key.'"</div><div class="track-title"><a class="playlist-track" href="#" data-play-track="'.$key.'">"'.$value.'"</a></div>';
+         //   $myReturn .= '<div class="play-list-row" data-track-row="'.$key.'"><div class="track-title"><a class="playlist-track" href="#" data-play-track="'.$key.'">"'.$value.'"</a></div>';
 
         }
         return $myReturn;
